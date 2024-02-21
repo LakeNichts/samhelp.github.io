@@ -64,7 +64,7 @@ function loadScene()
     )
 
     // Importar un modelo en gltf
-    const glloader = new GLTFLoader();
+    const glloader = new THREE.GLTFLoader();
 
     glloader.load( 'models/RobotExpressive.glb', function ( gltf ) {
     //glloader.load( 'models/robota/scene.gltf', function ( gltf ) {
