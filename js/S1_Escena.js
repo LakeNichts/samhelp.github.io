@@ -9,8 +9,6 @@
  */
 
 // Modulos necesarios
-// import * as THREE from "../lib/three.module.js";
-// import {GLTFLoader} from "../lib/GLTFLoader.module.js";
 
 // Variables de consenso
 let renderer, scene, camera;
