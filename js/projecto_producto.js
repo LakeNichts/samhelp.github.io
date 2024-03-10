@@ -37,7 +37,12 @@ function init() {
     direccional.castShadow = true;
     scene.add(direccional);
 
-    
+    document.addEventListener('keydown', function(event) {
+        // Verifique si la tecla presionada es 'A'
+        if (event.key === 'a' || event.key === 'A') {
+            rotationSpeed = 0; // Establecer la velocidad de rotación en 0
+        }
+    });
 
 }
 
