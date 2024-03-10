@@ -58,11 +58,16 @@ function loadScene() {
     suelo.rotateX(-Math.PI / 2); // Rotate the geometry to make it horizontal
     floor = new THREE.Mesh(suelo, material);
 
-    floor.addEventListener('click', function(event) {
+    floor.addEventListener('pointerup', function() {
         console.log('Click presionada');
-        rotationSpeed += 0.1; // Increase rotation speed when the floor is clicked
-        event.stopPropagation();
+        rotationSpeed = 0.1; // Increase rotation speed when the floor is clicked
     });
+
+    floor.addEventListener('pointerleave', function() {
+        console.log('Puntero fuera del suelo');
+        rotationSpeed = 0.01; // Restablecer la velocidad de rotación al valor normal
+    }); 
+    
     scene.add(floor);
 
     // Load an environment map texture for reflection
