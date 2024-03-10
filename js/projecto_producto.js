@@ -171,8 +171,8 @@ function loadScene() {
 }
 
 function update() {
-    angulo += 0.01;
-    angulo += rotationSpeed; // Update angle with rotation speed
+    //angulo += 0.01;
+    angulo = rotationSpeed; // Update angle with rotation speed
     if (floor){
         floor.rotation.y = angulo; // Rotate the floor
 }}
