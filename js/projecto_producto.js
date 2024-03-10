@@ -58,9 +58,10 @@ function loadScene() {
     suelo.rotateX(-Math.PI / 2); // Rotate the geometry to make it horizontal
     floor = new THREE.Mesh(suelo, material);
 
-    floor.addEventListener('click', function() {
+    floor.addEventListener('click', function(event) {
         console.log('Click presionada');
         rotationSpeed += 0.1; // Increase rotation speed when the floor is clicked
+        event.stopPropagation();
     });
     scene.add(floor);
 
