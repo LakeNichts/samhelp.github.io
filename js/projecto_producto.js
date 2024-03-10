@@ -42,7 +42,7 @@ function init() {
         console.log('Teclado presionado');
         if (event.key === 'a' || event.key === 'A') {
             console.log('Tecla A presionada');
-            rotationSpeed = 0; // Establecer la velocidad de rotación en 0
+            rotationSpeed = 0.1; // Establecer la velocidad de rotación en 0
         }
     });
 
@@ -60,7 +60,7 @@ function loadScene() {
 
     floor.addEventListener('click', function() {
         console.log('Click presionada');
-        rotationSpeed = 0; // Increase rotation speed when the floor is clicked
+        rotationSpeed += 0.1; // Increase rotation speed when the floor is clicked
     });
     scene.add(floor);
 
