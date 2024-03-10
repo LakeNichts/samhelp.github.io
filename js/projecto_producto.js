@@ -39,7 +39,9 @@ function init() {
 
     document.addEventListener('keydown', function(event) {
         // Verifique si la tecla presionada es 'A'
+        console.log('Teclado presionado');
         if (event.key === 'a' || event.key === 'A') {
+            console.log('Tecla A presionada');
             rotationSpeed = 0; // Establecer la velocidad de rotación en 0
         }
     });
@@ -57,6 +59,7 @@ function loadScene() {
     floor = new THREE.Mesh(suelo, material);
 
     floor.addEventListener('click', function() {
+        console.log('Click presionada');
         rotationSpeed = 0; // Increase rotation speed when the floor is clicked
     });
     scene.add(floor);
