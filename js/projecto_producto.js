@@ -50,9 +50,9 @@ function loadScene() {
     const suelo = new THREE.CircleGeometry(10, 100); // Increase segments for smoother appearance
     suelo.rotateX(-Math.PI / 2); // Rotate the geometry to make it horizontal
     floor = new THREE.Mesh(suelo, material);
-    
+
     floor.addEventListener('click', function() {
-        rotationSpeed += 0.01; // Increase rotation speed when the floor is clicked
+        rotationSpeed = 0; // Increase rotation speed when the floor is clicked
     });
     scene.add(floor);
 
